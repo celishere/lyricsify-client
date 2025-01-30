@@ -1,0 +1,83 @@
+.mobileContainer {
+  width: 90%;
+}
+
+.fullContainer {
+  padding-top: 0 !important;
+}
+
+.container {
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 92%;
+
+  display: grid;
+  row-gap: 7px;
+}
+
+.volumeContainer {
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  height: 10px;
+}
+
+.progress {
+  -webkit-appearance: none;
+
+  width: 100%;
+  height: 4px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.6) linear-gradient(#ffffff, #ffffff) no-repeat;
+  transition: height .1s ease-in-out, background-size .3s linear;
+
+  &[data-active="true"] {
+    transition: height .1s ease-in-out;
+  }
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  height: 12px;
+  width: 12px;
+
+  cursor: pointer;
+}
+
+
+.progress::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.timeContainer {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.55);
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}

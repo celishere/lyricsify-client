@@ -1,0 +1,56 @@
+.waitBlock {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+
+  justify-content: start;
+  column-gap: 5px;
+
+  transform: scale(0);
+  transform-origin: left center;
+  transition: all .11s linear;
+}
+
+.waitBlock[data-current="true"] {
+  height: 24px;
+  width: 100%;
+  transform: scale(1);
+  padding-bottom: 54px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--lyrics-dot-background-color, var(--systemPrimary));
+}
+
+.waitBlock[data-current="true"] {
+  animation: 5s ease-in 0s infinite normal none running heartbeat;
+}
+
+.waitBlock[data-current="true"] .dot {
+  transition-property: opacity;
+  opacity: 0.3;
+}
+
+.waitBlock[data-current="true"] .dotCurrent {
+  transition-property: opacity;
+  opacity: 1;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,39 @@
+.authorsBox {
+  padding-top: 26px;
+  padding-bottom: 42px;
+  padding-right: 6px;
+
+  width: fit-content;
+  display: block;
+
+  color: var(--lyrics-display-footer-color, var(--systemPrimary));
+  border-top: 1px solid rgba(235, 235, 245, .19);
+
+  opacity: 1;
+  scale: 0.94;
+
+  transition: opacity 1s linear, transform 0.35s ease-out;
+
+  &[data-current="true"] {
+    transform: scale(1);
+  }
+}
+
+.authorsBox span:last-child {
+  padding-right: 8px;
+}
+
+.footerLabel {
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-right: 5px;
+}
+
+.footerText {
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0;
+}

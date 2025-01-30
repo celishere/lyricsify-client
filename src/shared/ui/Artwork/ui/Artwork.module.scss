@@ -1,0 +1,150 @@
+.svelte {
+  position: relative;
+
+  transition: opacity .1s ease-in;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.svelteMobile {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.svelteFull {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.svelte img {
+  border-radius: 8px;
+}
+
+.pictureFrame {
+  box-sizing: border-box;
+  contain: content;
+  height: var(--artwork-override-height, auto);
+  max-height: var(--artwork-override-height, none);
+  max-width: var(--artwork-override-width, none);
+  min-height: var(--artwork-override-height, 0);
+  overflow: hidden;
+  position: relative;
+  width: var(--artwork-override-width, 100%);
+  z-index: 1;
+
+  transition: opacity .1s ease-in;
+
+  border-radius: 8px;
+}
+
+.pictureFrameMobile {
+  --artwork-override-width: 60px;
+  --artwork-override-height: 60px;
+  width: var(--artwork-override-width) !important;
+}
+
+.pictureFrameFull {
+  --artwork-override-width: 100px;
+  --artwork-override-height: 100px;
+  width: var(--artwork-override-width) !important;
+}
+
+.pictureFrame {
+  width: 100%;
+  height: 100%;
+}
+
+.pictureFrame img {
+  width: 100%;
+  height: 100%;
+
+  background: #3a3a3a;
+}
+
+.pictureFrameHidden {
+  opacity: 0;
+}
+
+.fallBackContainer {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  max-height: none;
+
+  top: 0;
+
+  box-sizing: border-box;
+  contain: content;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fallback {
+  position: absolute;
+  top: 0;
+  z-index: 9;
+
+  height: 100%;
+}
+
+.fallback svg {
+  height: inherit;
+  width: inherit;
+
+  border-radius: 8px;
+}
+
+.videoFrame {
+  transition: opacity .1s ease-in;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  position: absolute;
+
+  top: 0;
+  z-index: 1;
+
+  border-radius: 8px;
+}
+
+.videoFrame video {
+  border-radius: 8px;
+
+  width: 100%;
+  height: auto;
+}
+
+.artworkRadiosityContainer {
+  position: absolute;
+
+  box-shadow: 0 20px 25px rgba(0, 0, 0, .1), 0 10px 25px rgba(0, 0, 0, .1);
+  opacity: 1;
+
+  transform: scale(.92);
+  transform-origin: bottom center;
+  transition: opacity 1s ease-in;
+
+  width: 100%;
+  height: calc(100% - 4px);
+}
+
+.artworkRadiositySvelte {
+  -webkit-filter: blur(20px) saturate(2);
+  filter: blur(20px) saturate(2);
+  height: 100%;
+  opacity: .4;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,105 @@
+.container {
+    position: absolute;
+
+    width: 100%;
+    height: 80px;
+
+    opacity: 1;
+
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 40px;
+
+    transition: opacity 0.5s ease;
+
+    z-index: 90;
+}
+
+@media(min-width: 760px) {
+    .container {
+        gap: 12px !important;
+    }
+
+    .bubble {
+        height: 36px !important;
+        border-radius: 26px !important;
+        box-shadow: 35px 20px 40px 8px rgba(0,0,0,0.1), 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    .bubble a {
+        font-size: 16px !important;
+    }
+}
+
+.containerMobile {
+    gap: 8px;
+}
+
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.empty {
+    width: 10px;
+    height: 80px;
+}
+
+.emptyMobile {
+    width: 0;
+}
+
+.container div {
+    cursor: pointer;
+}
+
+.bubble {
+    background: hsla(0, 0%, 91%, 0.15);
+
+    border: none;
+    border-radius: 16px;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    min-width: 40px;
+    padding: 0 10px;
+
+    height: 24px;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 3px;
+
+    gap: 6px;
+
+    z-index: 91;
+}
+
+.bubbleMobile {
+    min-width: 0;
+}
+
+.bubble a {
+    font-family: var(--font-sf-semibold);
+    font-size: 12px;
+}
+
+.bubble svg {
+    fill: #fa586a;
+}
+
+.bubbleQr svg {
+    fill: #ffffff;
+}
+
+.revertClick {
+    cursor: initial !important;
+}

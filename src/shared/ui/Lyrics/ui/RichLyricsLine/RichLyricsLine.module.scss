@@ -1,0 +1,114 @@
+.syncLineBox {
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .syncLineBox {
+    width: var(--line-width);
+  }
+}
+
+.lineBlock {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.lineBlockAgent {
+  flex-direction: row-reverse;
+}
+
+.hiddenLine {
+  opacity: 0 !important;
+}
+
+.richLine {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  transform: scale(1);
+  transform-origin: left center;
+  transition: color 0.1s, transform 0.1s ease-in-out;
+}
+
+.lineAgent {
+  text-align: end;
+  max-width: 80%;
+  width: auto !important;
+  float: right !important;
+  transform-origin: right center;
+  transform: scale(0.94);
+  transition: opacity 1s linear, transform 0.35s ease-out;
+}
+
+.noAgentLine {
+  transform-origin: left center;
+  transform: scale(0.94);
+  transition: opacity 1s linear, transform 0.35s ease-out;
+}
+
+.bgWordsBox {
+  width: 100%;
+  line-height: 2px;
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+}
+
+.bgWordsBoxReverse {
+  width: inherit;
+  justify-content: flex-end;
+}
+
+.bgWordsActive {
+  padding: 12px 0;
+  opacity: 1;
+}
+
+.richBox {
+  width: inherit;
+}
+
+.richBoxCombined {
+  display: inline-block;
+  width: auto;
+}
+
+.richBgLine {
+  font-size: calc(var(--lyrics-line-font-size) / 3.05) !important;
+}
+
+@media (max-width: 700px) {
+  .richBgLine {
+    font-size: calc(var(--lyrics-line-font-size) / 2) !important;
+  }
+}
+
+.syncBg {
+  background-image: linear-gradient(
+                  90deg,
+                  rgba(var(--gradient-color), var(--gradient-color), var(--gradient-color), var(--gradient-color-alpha-active)) var(--gradient-progress),
+                  rgba(var(--gradient-color), var(--gradient-color), var(--gradient-color), var(--gradient-color-alpha)) calc(var(--gradient-progress) + 20%)
+  ) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 0 var(--text-shadow-blur-radius) rgba(255, 255, 255, var(--text-shadow-opacity));
+}
+
+.letterTransition {
+  transition: all 300ms ease;
+}
+
+.lineBlock[data-current="true"] {
+  .lineAgent,
+  .noAgentLine {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,36 @@
+.Container {
+  position: absolute;
+
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 100;
+
+  transition: opacity 0.5s ease;
+
+  button {
+    margin: 0 10px;
+
+    border-radius: 7px;
+
+    width: 28px;
+    height: 28px;
+
+    background: none;
+    border: 0;
+    outline: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+
+    svg {
+      fill: hsla(0, 0%, 100%, .64);
+      border-radius: inherit;
+    }
+  }
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}

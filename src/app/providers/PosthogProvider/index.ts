@@ -1,0 +1,1 @@
+export { CSPosthogProvider as PosthogProvider } from "./PosthogProvider";

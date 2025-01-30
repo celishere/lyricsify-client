@@ -1,0 +1,135 @@
+.svelte {
+  --line-animation-play-state: running;
+  background-color: transparent;
+  max-width: none;
+  align-items: center;
+  display: flex;
+  mix-blend-mode: plus-lighter;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.lyricsBox {
+  grid-area: lyrics;
+  overflow-y: scroll !important;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.autoScrolling {
+  --lyrics-display-synced-line-opacity: 0;
+  overflow-y: hidden;
+}
+
+.svelteIn {
+  background-color: transparent;
+  height: 75%;
+  max-width: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  width: 100%;
+  mask-image: var(--lyrics-linear-gradient, linear-gradient(180deg, #000 0, rgba(0, 0, 0, 0) 100%));
+}
+
+.svelteInFull {
+  height: 100% !important;
+}
+
+.lyrics {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  top: 0;
+}
+
+.lyricsFull {
+  width: 100% !important;
+}
+
+.svelte::-webkit-scrollbar,
+.lyrics::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 1320px) {
+  .lyrics {
+    --lyrics-line-font-size: 38px;
+    --lyrics-line-line-height: 1.21;
+  }
+
+  .lyricsFull {
+    --lyrics-line-font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .lyrics {
+    --lyrics-line-font-size: 60px;
+    --lyrics-line-line-height: 1.2;
+  }
+
+  .lyricsFull {
+    --lyrics-line-font-size: 70px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .lyrics {
+    --lyrics-line-font-size: 72px;
+    --lyrics-line-line-height: 1.19;
+  }
+}
+
+.lineBlock {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  visibility: visible;
+  opacity: 1;
+}
+
+.line {
+  display: inline-block;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: var(--lyrics-line-font-size, 22px);
+  color: var(--lyrics-line-color, var(--systemTertiary));
+  line-height: var(--lyrics-line-line-height, 1.18);
+  text-align: initial;
+  transition: color 0.1s, transform 0.1s ease-in-out;
+  padding-right: 5%;
+  transform: scale(1);
+}
+
+.line:hover {
+  color: #ffffff;
+}
+
+@keyframes gradientProgress {
+  from {
+    --gradient-progress: -20%;
+  }
+  to {
+    --gradient-progress: 100%;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

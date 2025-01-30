@@ -1,0 +1,50 @@
+.mobileContainer {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.item {
+  border: 0;
+  background: none;
+
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0.9);
+  }
+}
+
+.item svg {
+  width: 55px;
+  height: 55px;
+
+  fill: #D8D0D3;
+
+  &[data-prev="true"] {
+    transform: scale(0.9) rotate(180deg);
+  }
+}
+
+.item:hover svg {
+  fill: #ffffff;
+}
+
+.tutorialBox {
+  position: absolute;
+}

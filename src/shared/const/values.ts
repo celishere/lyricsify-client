@@ -1,0 +1,1 @@
+export const HOME_ARTWORK_URL = "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/52/aa/85/52aa851f-15b7-6322-f91f-df84b15b7b19/190295978044.jpg/50x50bb.jpg";

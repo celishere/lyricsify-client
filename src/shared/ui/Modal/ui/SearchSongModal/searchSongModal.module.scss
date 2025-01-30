@@ -1,0 +1,76 @@
+.inputBox {
+    width: 100%;
+    height: 60px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.32);
+
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 96%;
+    height: 50px;
+    border-radius: 16px;
+
+    background: none;
+    color: #c7c7c7;
+
+    font-size: 16px;
+    font-family: var(--font-sf-semibold);
+
+    outline: none !important;
+
+    border: 0;
+}
+
+.input::placeholder {
+    color: #9b9b9b;
+
+    font-size: 16px;
+    font-family: var(--font-sf-semibold);
+}
+
+.input:focus {
+    outline: none !important;
+
+    border: 0;
+}
+
+.input:disabled {
+    background-color: #2d2b2b;
+}
+
+.content {
+    height: 600px;
+    overflow: hidden;
+
+    margin: 8px 0;
+    border-radius: 12px;
+}
+
+/** Mobile */
+@media screen and (max-width: 700px), (max-height: 700px) {
+    .content {
+        height: 98vh;
+    }
+}
+
+.songs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+    height: 100%;
+
+    border-radius: 12px;
+
+    overflow: scroll;
+
+    padding-bottom: 60px;
+}
